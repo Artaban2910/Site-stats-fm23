@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>Répertoire de joueurs de foot</title>
+ <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <h1>Répertoire de joueurs de foot</h1>
+  <h2>Dans mon club</h2>
+  <div id="dans_mon_club">
+  </div>
+  <h2>Dans un autre club</h2>
+  <div id="dans_un_autre_club">
+  </div>
+  <h2>A la retraite</h2>
+  <div id="a_la_retraite">
+  </div>
+  <h2>Formulaire d'ajout de joueur</h2>
+  <form id="formulaire_ajout">
+    <label for="nom_joueur">Nom du joueur :</label><br>
+    <input type="text" id="nom_joueur" name="nom_joueur"><br>
+    <label for="categorie">Catégorie :</label><br>
+    <select id="categorie">
+      <option value="dans_mon_club">Dans mon club</option>
+      <option value="dans_un_autre_club">Dans un autre club</option>
+      <option value="a_la_retraite">A la retraite</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Ajouter">
+  </form> 
+  <script>
+    // Fonction qui ajoute un joueur au répertoire
+    function ajouterJoueur(nom, categorie) {
+      // Création de l'élément HTML pour le joueur
+      const joueurElem = document.createElement('div');
+      joueurElem.textContent = nom;
+      // Ajout de l'élément HTML pour le joueur à la bonne catégorie
+      document.getElementById(categorie).appendChild(joueurElem);
+    }
+    // Récupération du formulaire d'ajout de joueur
+    const formulaireAjout = document.getElementById('formulaire_ajout');
+    // Ajout d'un gestionnaire d'événement pour le formulaire
+    formulaireAjout.addEventListener('submit', (e) => {
+      // Empêcher la soumission du formulaire
+      e.preventDefault();
+      // Récupération du nom du joueur et de sa catégorie
+      const nom = document.getElementById('nom_joueur').value;
+      const categorie = document.getElementById('categorie').value;
+      // Ajout du joueur au répertoire
+      ajouterJoueur(nom, categorie);
+    });
+  </script>
+</body>
+</html>
+
