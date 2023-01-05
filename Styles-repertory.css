@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #00b8d4;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  .club-1 {
+    background-color: #80d8ff;
+  }
+  
+  .club-2 {
+    background-color: #ffd180;
+  }
+  
+  .retraite {
+    background-color: #ff8080;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #00b8d4;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
